@@ -3,6 +3,8 @@ package de.mohammadamir;
 import java.util.HashMap;
 import java.util.Map;
 
+// LRU Cache
+// https://leetcode.com/problems/lru-cache/
 public class LRUCache {
     private DoubleLinkedListNode first;
     private DoubleLinkedListNode last;
@@ -41,6 +43,7 @@ public class LRUCache {
             node = new DoubleLinkedListNode(key, value);
             store.put(key, node);
         }
+
         addNode(node);
     }
 
@@ -70,5 +73,17 @@ public class LRUCache {
         if(first == null){
             first = last;
         }
+    }
+}
+
+class DoubleLinkedListNode {
+    public int key;
+    public int value;
+    public DoubleLinkedListNode prev;
+    public DoubleLinkedListNode next;
+
+    public DoubleLinkedListNode(int key, int value){
+        this.key=key;
+        this.value=value;
     }
 }

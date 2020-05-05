@@ -3,12 +3,14 @@ package de.mohammadamir;
 import java.util.HashMap;
 import java.util.Map;
 
-class FirstUnique {
+// First Unique Number
+// https://leetcode.com/problems/first-unique-number/
+class FirstUniqueNumber {
     DLLNode head;
     DLLNode tail;
     Map<Integer, DLLNode> links;
 
-    public FirstUnique(int[] nums) {
+    public FirstUniqueNumber(int[] nums) {
         links = new HashMap<>();
 
         for (int num : nums) {

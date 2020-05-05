@@ -3,6 +3,8 @@ package de.mohammadamir;
 import java.util.ArrayList;
 import java.util.List;
 
+// Min Stack
+// https://leetcode.com/problems/min-stack/
 public class MinStack {
     private List<Integer> store;
     private List<Integer> minStore;
